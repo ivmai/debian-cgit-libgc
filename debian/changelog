@@ -6,6 +6,7 @@ libgc (1:6.8-2) UNRELEASED; urgency=low
   * Bump Standards-Version to 3.8.2.
   * Add Homepage: field.
   * Add ${misc:Depends} for all binary packages.
+  * Use ${binary:Version} in libgc-dev => libgcX versioned dependency.
 
  -- Chris Lamb <lamby@debian.org>  Wed, 12 Aug 2009 00:26:09 +0100
 
