@@ -4,6 +4,7 @@ Section: libs
 Priority: standard
 Build-Depends: debhelper, quilt
 Standards-Version: 3.8.2
+Homepage: http://www.hpl.hp.com/personal/Hans_Boehm/gc/
 
 Package: libgc1c2
 Architecture: any
