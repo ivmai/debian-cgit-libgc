@@ -3,7 +3,7 @@ Maintainer: Chris Lamb <lamby@debian.org>
 Section: libs
 Priority: standard
 Build-Depends: debhelper, quilt
-Standards-Version: 3.7.2
+Standards-Version: 3.8.2
 
 Package: libgc1c2
 Architecture: any

@@ -3,6 +3,7 @@ libgc (1:6.8-2) UNRELEASED; urgency=low
   * New maintainer. (Closes: #541015)
   * Roughly extract changes from .diff.gz into quilt patch series in
     debian/patches.
+  * Bump Standards-Version to 3.8.2.
 
  -- Chris Lamb <lamby@debian.org>  Wed, 12 Aug 2009 00:26:09 +0100
 
