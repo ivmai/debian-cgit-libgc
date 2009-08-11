@@ -2,6 +2,8 @@
 # Made with the aid of dh_make, by Craig Small
 # Sample debian/rules that uses debhelper. GNU copyright 1997 by Joey Hess.
 
+include /usr/share/quilt/quilt.make
+
 DEB_BUILD_ARCH:=$(shell dpkg --print-installation-architecture)
 
 ifeq ($(DEB_BUILD_ARCH),hurd-i386)
@@ -15,7 +17,7 @@ export DH_COMPAT=4
 # Uncomment this to turn on verbose mode. 
 #export DH_VERBOSE=1
 
-build: build-stamp
+build: build-stamp $(QUILT_STAMPFN)
 build-stamp:
 	dh_testdir
 	
@@ -27,7 +29,7 @@ build-stamp:
 	$(MAKE)
 	touch build-stamp
 
-clean:
+clean: unpatch
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp install-stamp

@@ -1,0 +1,90 @@
+
+Various architecture support changes. Imported semi-automatically from .diff.gz.
+
+diff --git a/configure.in b/configure.in
+index 9923a2b..6589008 100644
+--- a/configure.in
++++ b/configure.in
+@@ -78,7 +78,7 @@ case "$THREADS" in
+     THREADS=posix
+     THREADDLLIBS=-lpthread
+     case "$host" in
+-     x86-*-linux* | ia64-*-linux* | i586-*-linux* | i686-*-linux* | x86_64-*-linux* | alpha-*-linux*)
++     *-*-linux*)
+ 	AC_DEFINE(GC_LINUX_THREADS)
+ 	AC_DEFINE(_REENTRANT)
+         if test "${enable_parallel_mark}" = yes; then
+@@ -86,10 +86,6 @@ case "$THREADS" in
+ 	fi
+ 	AC_DEFINE(THREAD_LOCAL_ALLOC)
+ 	;;
+-     *-*-linux*)
+-	AC_DEFINE(GC_LINUX_THREADS)
+-	AC_DEFINE(_REENTRANT)
+-	;;
+      *-*-aix*)
+ 	AC_DEFINE(GC_AIX_THREADS)
+ 	AC_DEFINE(_REENTRANT)
+diff --git a/include/private/gcconfig.h b/include/private/gcconfig.h
+index 5f897a4..f7ab586 100644
+--- a/include/private/gcconfig.h
++++ b/include/private/gcconfig.h
+@@ -334,6 +334,10 @@
+ #   define I386
+ #   define mach_type_known
+ # endif
++# if defined(FREEBSD) && defined(__x86_64__)
++#   define X86_64
++#   define mach_type_known
++# endif
+ # if defined(__NetBSD__) && (defined(i386) || defined(__i386__))
+ #   define I386
+ #   define mach_type_known
+@@ -680,10 +684,10 @@
+ #   endif
+ #   ifdef LINUX
+ #       define OS_TYPE "LINUX"
+-#       define STACKBOTTOM ((ptr_t)0xf0000000)
++#       define LINUX_STACKBOTTOM
+ #       define USE_GENERIC_PUSH_REGS
+ 		/* We never got around to the assembly version. */
+-/* #       define MPROTECT_VDB - Reported to not work  9/17/01 */
++#       define MPROTECT_VDB
+ #       ifdef __ELF__
+ #            define DYNAMIC_LOADING
+ #	     include <features.h>
+diff --git a/os_dep.c b/os_dep.c
+index c9396f5..c4bf7ef 100644
+--- a/os_dep.c
++++ b/os_dep.c
+@@ -84,7 +84,7 @@
+ #   define NEED_FIND_LIMIT
+ # endif
+ 
+-#if defined(FREEBSD) && (defined(I386) || defined(powerpc) || defined(__powerpc__))
++#if defined(FREEBSD) && (defined(I386) || defined(X86_64) || defined(powerpc) || defined(__powerpc__))
+ #  include <machine/trap.h>
+ #  if !defined(PCR)
+ #    define NEED_FIND_LIMIT
+@@ -1392,7 +1392,7 @@ int * etext_addr;
+ }
+ # endif
+ 
+-# if defined(FREEBSD) && (defined(I386) || defined(powerpc) || defined(__powerpc__)) && !defined(PCR)
++# if defined(FREEBSD) && (defined(I386) || defined(X86_64) || defined(powerpc) || defined(__powerpc__)) && !defined(PCR)
+ /* Its unclear whether this should be identical to the above, or 	*/
+ /* whether it should apply to non-X86 architectures.			*/
+ /* For now we don't assume that there is always an empty page after	*/
+diff --git a/pthread_stop_world.c b/pthread_stop_world.c
+index 66d7b5c..b155524 100644
+--- a/pthread_stop_world.c
++++ b/pthread_stop_world.c
+@@ -129,7 +129,7 @@ sem_t GC_suspend_ack_sem;
+ 
+ void GC_suspend_handler_inner(ptr_t sig_arg);
+ 
+-#if defined(IA64) || defined(HP_PA)
++#if defined(IA64) || defined(HP_PA) || defined(M68K)
+ extern void GC_with_callee_saves_pushed();
+ 
+ void GC_suspend_handler(int sig)
