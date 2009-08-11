@@ -1,6 +1,7 @@
-libgc (1:6.8-2) UNRELEASED; urgency=low
+libgc (1:7.1-1) UNRELEASED; urgency=low
 
   * New maintainer. (Closes: #541015)
+  * New upstream release. (Closes: #434106, #446068)
   * Roughly extract changes from .diff.gz into quilt patch series in
     debian/patches.
   * Bump Standards-Version to 3.8.2.
