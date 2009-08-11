@@ -2,7 +2,7 @@
 
 include /usr/share/quilt/quilt.make
 
-DEB_BUILD_ARCH:=$(shell dpkg --print-installation-architecture)
+DEB_BUILD_ARCH:=$(shell dpkg --print-architecture)
 
 ifeq ($(DEB_BUILD_ARCH),hurd-i386)
 	CONFIG_OPTS:=--disable-threads
