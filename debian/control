@@ -1,5 +1,5 @@
 Source: libgc
-Maintainer: Ryan Murray <rmurray@debian.org>
+Maintainer: Chris Lamb <lamby@debian.org>
 Section: libs
 Priority: standard
 Build-Depends: debhelper
