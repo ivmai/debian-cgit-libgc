@@ -8,6 +8,7 @@ libgc (1:7.1-1) UNRELEASED; urgency=low
     - Extract changes from .diff.gz into quilt patch series
     - Update architecture patches for new upstream; partly applied upstream
   * Move to debhelper 7.
+  * Add symbols file for libgc1c2.
   * debian/control:
     - Bump Standards-Version to 3.8.2.
     - Add Homepage: field.

@@ -34,6 +34,3 @@ override_dh_auto_clean:
 
 override_dh_installchangelogs:
 	dh_installchangelogs doc/README.changes
-
-override_dh_makeshlibs:
-	dh_makeshlibs -V 'libgc1c2 (>= 1:6.8-1.1)'
