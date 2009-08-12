@@ -15,6 +15,8 @@ libgc (1:7.1-1) UNRELEASED; urgency=low
   * Install README.environment via dh_installdocs, not dh_install.
   * Update architecture patches for new upstream.
   * Drop duplicate "Section:" heading in libgc1c2.
+  * Update long description, clarifying ambiguity caused by Debian's choice
+    of configuration. (Closes: #329338)
 
  -- Chris Lamb <lamby@debian.org>  Wed, 12 Aug 2009 00:26:09 +0100
 
