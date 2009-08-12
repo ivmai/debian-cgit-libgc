@@ -1,3 +1,9 @@
+libgc (1:7.1-2) UNRELEASED; urgency=low
+
+  * Add Vcs-{Git,Browser} headers.
+
+ -- Chris Lamb <lamby@debian.org>  Wed, 12 Aug 2009 02:35:25 +0100
+
 libgc (1:7.1-1) experimental; urgency=low
 
   * New maintainer. (Closes: #541015)
