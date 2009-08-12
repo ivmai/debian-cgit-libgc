@@ -19,6 +19,8 @@ libgc (1:7.1-1) UNRELEASED; urgency=low
       of configuration. (Closes: #329338)
   * Remove some cruft from debian/rules.
   * Install README.environment via dh_installdocs, not dh_install.
+  * Don't install README.cords if we aren't shipping that library
+    (Closes: #422440)
 
  -- Chris Lamb <lamby@debian.org>  Wed, 12 Aug 2009 00:26:09 +0100
 
