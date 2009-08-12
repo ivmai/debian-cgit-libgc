@@ -24,6 +24,10 @@ override_dh_auto_configure:
 		--localstatedir=/var/lib \
 		--datadir=\$${prefix}/share/doc
 
+override_dh_install:
+	install -D doc/gc.man debian/tmp/usr/share/man/man3/gc_malloc.3
+	dh_install
+
 override_dh_auto_clean:
 	dh_auto_clean
 	rm -rf autom4te.cache
