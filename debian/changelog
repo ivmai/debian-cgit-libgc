@@ -11,6 +11,7 @@ libgc (1:7.1-1) UNRELEASED; urgency=low
   * Add ${misc:Depends} for all binary packages.
   * Use ${binary:Version} in libgc-dev => libgcX versioned dependency.
   * Remove some cruft from debian/rules.
+  * Move to debhelper 7.
 
  -- Chris Lamb <lamby@debian.org>  Wed, 12 Aug 2009 00:26:09 +0100
 

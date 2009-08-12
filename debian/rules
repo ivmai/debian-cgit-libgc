@@ -1,7 +1,5 @@
 #!/usr/bin/make -f
 
-include /usr/share/quilt/quilt.make
-
 DEB_BUILD_ARCH:=$(shell dpkg --print-architecture)
 
 ifeq ($(DEB_BUILD_ARCH),hurd-i386)
@@ -10,55 +8,23 @@ else
 	CONFIG_OPTS:=
 endif
 
-export DH_COMPAT=4
+%:
+	dh --with quilt $@
 
-build: build-stamp 
-build-stamp: $(QUILT_STAMPFN)
-	dh_testdir
-	./configure $(CONFIG_OPTS) --enable-cplusplus --disable-dependency-tracking \
-		--with-tags=CXX --prefix=/usr --mandir=\$${prefix}/share/man\
-		--sysconfdir=/etc --localstatedir=/var/lib\
+override_dh_auto_configure:
+	./configure \
+		$(CONFIG_OPTS) \
+		--enable-cplusplus \
+		--disable-dependency-tracking \
+		--with-tags=CXX \
+		--prefix=/usr \
+		--mandir=\$${prefix}/share/man \
+		--sysconfdir=/etc \
+		--localstatedir=/var/lib \
 		--datadir=\$${prefix}/share/doc
-	$(MAKE)
-	touch $@
 
-clean: unpatch
-	dh_testdir
-	dh_testroot
-	rm -f build-stamp install-stamp
-
-	-$(MAKE) distclean
-
-	dh_clean
-
-install: install-stamp
-install-stamp: build-stamp
-	dh_testdir
-	dh_testroot
-	dh_clean -k
-
-	$(MAKE) check
-	$(MAKE) install DESTDIR=`pwd`/debian/tmp
-	touch $@
-
-binary-indep: build install
-
-binary-arch: build install
-	dh_testdir
-	dh_testroot
-	dh_link
-	dh_installdocs
+override_dh_installchangelogs:
 	dh_installchangelogs doc/README.changes
-	dh_install --sourcedir=debian/tmp
-	dh_strip
-	dh_compress
-	dh_fixperms
-	dh_makeshlibs -V 'libgc1c2 (>= 1:6.8-1.1)'
-	dh_installdeb
-	dh_shlibdeps
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb
 
-binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary
+override_dh_makeshlibs:
+	dh_makeshlibs -V 'libgc1c2 (>= 1:6.8-1.1)'
