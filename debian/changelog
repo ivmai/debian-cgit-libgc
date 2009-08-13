@@ -2,6 +2,8 @@ libgc (1:7.1-2) UNRELEASED; urgency=low
 
   * Add Vcs-{Git,Browser} headers.
   * Add Build-Depends-Package.
+  * Add avr32 support. Patch by Bradley Smith <brad@brad-smith.co.uk>.
+    (Closes: #528406)
 
  -- Chris Lamb <lamby@debian.org>  Wed, 12 Aug 2009 02:35:25 +0100
 
