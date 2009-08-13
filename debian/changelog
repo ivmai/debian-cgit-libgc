@@ -1,6 +1,7 @@
 libgc (1:7.1-2) UNRELEASED; urgency=low
 
   * Fix FTBFS on sparc by specifying correct machine-dependent code.
+  * Fix FTBFS on s390 by correcting #include directory.
   * Add avr32 support. Patch by Bradley Smith <brad@brad-smith.co.uk>.
     (Closes: #528406)
   * Symbols maintenance:
