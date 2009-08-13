@@ -1,4 +1,5 @@
 libgc.so.1 libgc1c2 #MINVER#
+* Build-Depends-Package: libgc-dev
  AO_compare_and_swap_emulation@Base 1:7.1
  AO_compare_double_and_swap_double_emulation@Base 1:7.1
  AO_locks@Base 1:7.1
