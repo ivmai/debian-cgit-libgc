@@ -7,7 +7,9 @@ libgc (1:7.1-4) experimental; urgency=low
     * Now builds on mipsen as well (Closes: #542285)
     * Include correct arch-specific symbols file for mipsen
     * Remove atomic-ops specific symbols from symbols file
+    * Drop patch for automic-ops on s390
   * Fix dependency on debhelper (needs 7.0.50 > 7)
+  * Bump standards version to 3.9.1
 
  -- Christoph Egger <christoph@debian.org>  Sat, 09 Oct 2010 16:08:53 +0200
 
