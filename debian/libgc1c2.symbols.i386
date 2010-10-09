@@ -513,6 +513,4 @@ libgccpp.so.1 libgc1c2 #MINVER#
  _ZdaPv@Base 1:7.1
  _ZdlPv@Base 1:7.1
  _Znaj@Base 1:7.1-2
-#MISSING: 1:7.1-2# _Znam@Base 1:7.1
  _Znwj@Base 1:7.1-2
-#MISSING: 1:7.1-2# _Znwm@Base 1:7.1
