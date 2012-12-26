@@ -1,6 +1,14 @@
-libgc (1:7.1-9) UNRELEASED; urgency=low
+libgc (1:7.1-9.1) unstable; urgency=low
 
-  * Import patches to fix CVE-2012-2673 from upstream git
+  * Non-maintainer upload.
+  * libgc-dev.preinst: handle symlink replaced by a directory on upgrade from
+    Squeeze (Closes: #696073)
+
+ -- David Prévot <taffit@debian.org>  Wed, 26 Dec 2012 19:49:03 -0400
+
+libgc (1:7.1-9) unstable; urgency=medium
+
+  * Import patches to fix CVE-2012-2673 from upstream git (Closes: #677195)
 
  -- Christoph Egger <christoph@debian.org>  Sun, 08 Jul 2012 18:27:48 +0200
 
