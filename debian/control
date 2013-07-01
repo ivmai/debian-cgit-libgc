@@ -2,8 +2,12 @@ Source: libgc
 Maintainer: Christoph Egger <christoph@debian.org>
 Section: libs
 Priority: standard
-Build-Depends: debhelper (>= 9), autoconf, libatomic-ops-dev (>= 7.2~), pkg-config
-Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 9),
+ autoconf,
+ libatomic-ops-dev (>= 7.3~),
+ pkg-config,
+ pkg-kde-tools
+Standards-Version: 3.9.4
 Homepage: http://www.hpl.hp.com/personal/Hans_Boehm/gc/
 Vcs-Git: git://git.debian.org/git/collab-maint/libgc.git
 Vcs-Browser: http://git.debian.org/?p=collab-maint/libgc.git;a=summary
