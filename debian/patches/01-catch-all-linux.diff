@@ -5,19 +5,19 @@ Catch all linux variants.
 
 Index: libgc/configure.ac
 ===================================================================
---- libgc.orig/configure.ac	2013-12-23 13:31:14.000000000 +0100
-+++ libgc/configure.ac	2013-12-23 13:31:14.801268924 +0100
-@@ -176,8 +176,7 @@
+--- libgc.orig/configure.ac
++++ libgc/configure.ac
+@@ -176,8 +176,7 @@ case "$THREADS" in
      THREADS=posix
      AC_CHECK_LIB(pthread, pthread_self, THREADDLLIBS="-lpthread",,)
      case "$host" in
 -     x86-*-linux* | ia64-*-linux* | i586-*-linux* | i686-*-linux* \
--     | x86_64-*-linux* | alpha-*-linux* | sparc*-*-linux*)
+-     | x86_64-*-linux* | alpha-*-linux* | powerpc*-*-linux* | sparc*-*-linux*)
 +     *-*-linux*)
          AC_DEFINE(GC_LINUX_THREADS)
          AC_DEFINE(_REENTRANT)
          if test "${enable_parallel_mark}" != no; then
-@@ -186,10 +185,6 @@
+@@ -186,10 +185,6 @@ case "$THREADS" in
          AC_DEFINE(THREAD_LOCAL_ALLOC)
          AC_MSG_WARN("Explicit GC_INIT() calls may be required.");
          ;;
