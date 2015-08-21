@@ -1,5 +1,6 @@
 Source: libgc
 Maintainer: Christoph Egger <christoph@debian.org>
+Uploaders: Debian GCC Maintainers <debian-gcc@lists.debian.org>
 Section: libs
 Priority: standard
 Build-Depends: debhelper (>= 9),
