@@ -1,4 +1,5 @@
   * update standards version
+  * Update symbols files
   * Switch to dh-autoreconf
 libgc (1:7.4.0-1) experimental; urgency=medium
 
