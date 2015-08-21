@@ -43,4 +43,4 @@ override_dh_auto_clean:
 	rm -rf autom4te.cache libatomic_ops atomic_ops_sysdeps.S atomic_ops.c
 
 override_dh_installchangelogs:
-	dh_installchangelogs doc/README.changes
+	dh_installchangelogs ChangeLog

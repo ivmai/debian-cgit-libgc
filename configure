@@ -15765,8 +15765,7 @@ if test "x$ac_cv_lib_pthread_pthread_self" = xyes; then :
 fi
 
     case "$host" in
-     x86-*-linux* | ia64-*-linux* | i586-*-linux* | i686-*-linux* \
-     | x86_64-*-linux* | alpha-*-linux* | sparc*-*-linux*)
+     *-*-linux*)
         $as_echo "#define GC_LINUX_THREADS 1" >>confdefs.h
 
         $as_echo "#define _REENTRANT 1" >>confdefs.h
@@ -15779,12 +15778,6 @@ fi
 
         { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: \"Explicit GC_INIT() calls may be required.\"" >&5
 $as_echo "$as_me: WARNING: \"Explicit GC_INIT() calls may be required.\"" >&2;};
-        ;;
-     *-*-linux*)
-        $as_echo "#define GC_LINUX_THREADS 1" >>confdefs.h
-
-        $as_echo "#define _REENTRANT 1" >>confdefs.h
-
         ;;
      *-*-aix*)
         $as_echo "#define GC_AIX_THREADS 1" >>confdefs.h
@@ -16434,6 +16427,9 @@ $as_echo "#define SOLARIS25_PROC_VDB_BUG_FIXED 1" >>confdefs.h
     ;;
  mips-*-*)
                 ;;
+ sparc*-*-linux*)
+    machdep="mach_dep.lo sparc_mach_dep.lo"
+    ;;
  sparc-*-netbsd*)
     machdep="src/sparc_netbsd_mach_dep.lo"
     ;;

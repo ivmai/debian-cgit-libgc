@@ -1,8 +1,8 @@
 Index: libgc/include/private/gcconfig.h
 ===================================================================
---- libgc.orig/include/private/gcconfig.h	2013-06-09 13:26:20.000000000 +0200
-+++ libgc/include/private/gcconfig.h	2013-06-09 13:52:33.028299704 +0200
-@@ -273,6 +273,10 @@
+--- libgc.orig/include/private/gcconfig.h	2013-12-23 13:31:26.000000000 +0100
++++ libgc/include/private/gcconfig.h	2013-12-23 13:31:26.921265376 +0100
+@@ -310,6 +310,10 @@
  #    define SPARC
  #    define mach_type_known
  # endif
@@ -13,7 +13,7 @@ Index: libgc/include/private/gcconfig.h
  # if defined(LINUX) && defined(__sh__)
  #    define SH
  #    define mach_type_known
-@@ -1996,6 +2000,19 @@
+@@ -2092,6 +2096,19 @@
  #   endif
  #endif
  
@@ -36,7 +36,7 @@ Index: libgc/include/private/gcconfig.h
 Index: libgc/libatomic_ops-1.2/src/atomic_ops/sysdeps/gcc/avr32.h
 ===================================================================
 --- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ libgc/libatomic_ops-1.2/src/atomic_ops/sysdeps/gcc/avr32.h	2013-06-09 13:52:33.028299704 +0200
++++ libgc/libatomic_ops-1.2/src/atomic_ops/sysdeps/gcc/avr32.h	2013-12-23 13:31:26.921265376 +0100
 @@ -0,0 +1,44 @@
 +/*
 + * Copyright (C) 2009 Bradley Smith <brad@brad-smith.co.uk>
