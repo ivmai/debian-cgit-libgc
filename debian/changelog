@@ -16,7 +16,7 @@ libgc (1:7.4.2-2) experimental; urgency=medium
 
 libgc (1:7.4.2-1) experimental; urgency=medium
 
-  * New upstream version
+  * New upstream version (Closes: #796242)
 
  -- Christoph Egger <christoph@debian.org>  Fri, 21 Aug 2015 11:41:48 +0200
 
