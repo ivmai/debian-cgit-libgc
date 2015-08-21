@@ -1,3 +1,9 @@
+libgc (1:7.4.2-3) UNRELEASED; urgency=medium
+
+  * Update Homepage (Closes: #747904)
+
+ -- Christoph Egger <christoph@debian.org>  Fri, 21 Aug 2015 19:28:15 +0200
+
 libgc (1:7.4.2-2) experimental; urgency=medium
 
   * update standards version
