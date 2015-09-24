@@ -2,6 +2,8 @@ libgc (1:7.4.2-4) UNRELEASED; urgency=medium
 
   * Drop 03-add-avr32-support.diff, merged upstream
   * Drop 04-fix-sparc-ftbfs.diff, merged upstream
+  * add enable-parallel-mark-where-supported.diff to keep PARALLEL_MARK
+    enabled on all platforms where it works
 
  -- Christoph Egger <christoph@debian.org>  Thu, 24 Sep 2015 14:16:12 +0200
 
