@@ -1,4 +1,4 @@
-01-catch-all-linux.diff
+#01-catch-all-linux.diff
 02-manpage.diff
 03-add-avr32-support.diff
 04-fix-sparc-ftbfs.diff
