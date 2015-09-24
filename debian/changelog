@@ -1,3 +1,9 @@
+libgc (1:7.4.2-4) UNRELEASED; urgency=medium
+
+  * Drop 03-add-avr32-support.diff, merged upstream
+
+ -- Christoph Egger <christoph@debian.org>  Thu, 24 Sep 2015 14:16:12 +0200
+
 libgc (1:7.4.2-3) experimental; urgency=medium
 
   * Update Homepage (Closes: #747904)
