@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 1:7.4.2 amd64 armel armhf i386 kfreebsd-amd64 kfreebsd-i386 powerpc s390x
+# SymbolsHelper-Confirmed: 1:7.4.2 amd64 armel armhf hppa i386 kfreebsd-amd64 kfreebsd-i386 mipsel powerpc ppc64 s390x
 libgc.so.1 libgc1c2 #MINVER#
  (arch=armel)AO_compare_double_and_swap_double_emulation@Base 1:7.4.2
  (arch=armel)AO_fetch_compare_and_swap_emulation@Base 1:7.4.2
@@ -463,8 +463,8 @@ libgc.so.1 libgc1c2 #MINVER#
  GC_push_finalizer_structures@Base 1:7.2d
  GC_push_gc_structures@Base 1:7.2d
  (arch=kfreebsd-amd64 kfreebsd-i386)GC_push_marked1@Base 1:7.4.2
- (arch=!amd64 !armel !armhf !i386 !m68k !powerpc !s390x)GC_push_marked2@Base 1:7.2d
- (arch=!amd64 !armel !armhf !i386 !m68k !powerpc !s390x)GC_push_marked4@Base 1:7.2d
+ (arch=!amd64 !armel !armhf !hppa !i386 !m68k !mipsel !powerpc !ppc64 !s390x)GC_push_marked2@Base 1:7.2d
+ (arch=!amd64 !armel !armhf !hppa !i386 !m68k !mipsel !powerpc !ppc64 !s390x)GC_push_marked4@Base 1:7.2d
  GC_push_marked@Base 1:7.2d
  GC_push_next_marked@Base 1:7.2d
  GC_push_next_marked_dirty@Base 1:7.2d
