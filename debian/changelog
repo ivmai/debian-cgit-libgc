@@ -1,10 +1,10 @@
-libgc (1:7.4.2-3) UNRELEASED; urgency=medium
+libgc (1:7.4.2-3) experimental; urgency=medium
 
   * Update Homepage (Closes: #747904)
   * Remove 01-catch-all-linux.patch as it at least breaks arm64
   * Import hppa mipsel and ppc64 symbols
 
- -- Christoph Egger <christoph@debian.org>  Fri, 21 Aug 2015 19:28:15 +0200
+ -- Christoph Egger <christoph@debian.org>  Thu, 24 Sep 2015 13:35:55 +0200
 
 libgc (1:7.4.2-2) experimental; urgency=medium
 
