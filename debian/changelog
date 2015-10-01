@@ -1,6 +1,7 @@
 libgc (1:7.4.2-5) UNRELEASED; urgency=medium
 
   * Disable parallel mark on ppc64el
+  * Import symbols for arm64 mips and ppc64el
 
  -- Christoph Egger <christoph@debian.org>  Thu, 01 Oct 2015 15:49:45 +0200
 
