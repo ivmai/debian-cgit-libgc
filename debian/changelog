@@ -1,8 +1,8 @@
-libgc (1:7.4.2-6) UNRELEASED; urgency=medium
+libgc (1:7.4.2-6) unstable; urgency=medium
 
   * Remove unused patches
 
- -- Christoph Egger <christoph@debian.org>  Thu, 01 Oct 2015 16:13:21 +0200
+ -- Christoph Egger <christoph@debian.org>  Fri, 02 Oct 2015 09:02:27 +0200
 
 libgc (1:7.4.2-5) experimental; urgency=medium
 
