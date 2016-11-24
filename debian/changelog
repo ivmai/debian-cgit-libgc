@@ -1,3 +1,12 @@
+libgc (1:7.1-9.1+deb7u1) wheezy-security; urgency=medium
+
+  * Non-maintainer upload by the Debian LTS team.
+  * Backport upstream patches for CVE-2016-9427, in multiple places libgc
+    fails to detect integer overflows and returns pointers to memory zones
+    smaller than the requested size. Closes: #844771
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Thu, 24 Nov 2016 18:11:46 +0100
+
 libgc (1:7.1-9.1) unstable; urgency=low
 
   * Non-maintainer upload.
